@@ -1,0 +1,214 @@
+/*---------------Header---------------*/
+/*Defineert het lettertype langdon (gebruikt voor headerafbeelding)*/
+@font-face {
+	font-family: Langdon;
+	src: url('fonts/langdon.otf') format('opentype');
+}
+/*Maakt een klasse voor het lettertype- en grootte van de tekst op de header*/
+.langdonLarge {
+	font-family: Langdon !important;
+	font-size: 92px !important;
+	color: white;
+}
+/*Stelt de kleur voor de ondertitel naar wit*/
+#lowerText {
+	color: white;
+}
+
+
+
+/*---------------Navbar---------------*/
+/*Een klasse die geactiveerd wordt als er gescrold is en de achtergrondkleur van de navbar instelt*/
+.showNavbar {
+    background-color: #343A40 !important;
+    opacity: 0.9;
+}
+/*Verandert de uitstraling van de link onderdelen in de navbar*/
+.nav-link {
+	font-weight: 400;
+	text-decoration: underline;
+	color: white !important;
+}
+
+
+
+/*---------------Introtekst---------------*/
+/*Stelt de marge in om te voorkomen dat de introtekst onder de navbar valt*/
+#topMargin {
+	margin-top: 20px;
+}
+
+
+
+/*---------------Inhoud jaren---------------*/
+#jaarEen {
+	display: block;
+}
+#jaarTwee {
+	display: none;
+}
+#jaarDrie {
+	display: none;
+}
+#jaarVier {
+	display: none;
+}
+
+
+
+/*---------------Footer---------------*/
+/*Verandert de opmaak van de unordered list in de footer*/
+.footerList {
+	color: white;
+	list-style-type: none;
+}
+/*Informatie van Sjoerd staat vanaf rechts*/
+#sjoerdList {
+	text-align: right;
+}
+/*Stelt de breedte en cirkel van de afbeelding in*/
+.profielFoto {
+	border-radius: 50%;
+	width: 60%;
+}
+/*Zorgt ervoor dat de foto van Robin naar rechts gaat*/
+#robinFoto {
+	float: right;
+}
+
+
+
+/*---------------Opmaak voor de quote---------------*/
+.design .jumbotron	{
+	background-color: transparent;
+	padding: 0;
+}
+
+.design .jumbotron .text-design	{
+	background-color: #fdfdfd;
+	border-left: 3px solid;
+	border-color: #0059bf;
+	padding-left: 10px; 
+	color: #727272;
+}
+
+.jumbotron.bg-light	{
+	margin-bottom: 20px;
+}
+
+
+
+/*---------------Parallax---------------*/
+/* Dit geeft aan welk vlak er vrij moet worden gemaakt voor de afbeelding */
+.parallax { 			
+    height: 275px; 
+    margin: 20px 0px;
+}
+.parallax-header	{
+	height:	100vh;
+	margin-bottom: 20px;
+}
+/* Zorgt voor een stilstaande afbeelding. */
+.parallax-settings	{				
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* 93,5px voor het centreren van de text. */
+.parallax-text	{
+	color: white;
+	padding: 115.5px 0px;	              
+}
+/* kleine margin-correctie zodat de text echt helemaal in het midden staat */
+.parallax-text .text-center	{		
+	margin-bottom: 0 !important; 
+}
+/* Parallax achtergrondafbeeldingen. Allemaal bij elkaar zodat je makkelijk iets kan veranderen */
+.parallax-image-0	{
+	background-image: url("headerImage.png");
+}
+.parallax-image-1	{
+    background-image: url("coding-snippet.jpg");
+}
+
+.parallax-image-2	{
+	background-image: url("books.jpg");
+}
+
+.parallax-image-3	{
+	background-image: url("meeting.jpg");
+}
+
+.parallax-image-4	{
+	background-image: url("future.jpg");
+}
+
+.parallax-image-5	{
+	background-image: url("gebouw-ld.jpg");
+}
+
+.parallax-image-6	{
+	background-image: url("breda.jpg");
+}
+
+
+
+/*---------------Overig---------------*/
+/*Zorgt er voor dat alles wat op kleine schermen zichtbaar moet zijn standaard onzichtbaar is*/
+.bigScreenToggler {
+	display: none;
+}
+/*Zorgt ervoor dat de headertekst van de tabel zwart is*/
+#titelTabel {
+	color: black;
+}
+
+
+
+/*---------------Media Queries---------------*/
+/*Alles vanaf het punt dat de bootstrap klasse lg niet meer geldt*/
+@media only screen and (min-width: 0px) and (max-width: 991px){
+	.hideLarge{
+		display: none !important;
+	}
+
+    /*Verandert de navbarkleur van transparant naar zwart*/
+    nav {
+    	background-color: #343A40 !important;
+    	opacity: 0.9;
+    }
+}
+
+/*Alles vanaf het punt dat de bannerafbeelding verdwijnt en kleiner*/
+@media only screen and (min-width: 0px) and (max-width: 709px){
+	/*Verbergt alle onderdelen met deze klasse*/
+	.smallScreenToggler {
+		display: none;
+	}
+	/*Toont alle onderdelen met deze klasse*/
+	.bigScreenToggler {
+		display: block;
+	}
+
+	/*Zorgt dat de jumbotron op mobiele weergave niet onder de navbar valt*/
+	#topMargin{
+		margin-top: 80px;
+	}
+}
+
+/*Alles onder de 576 pixels schermbreedte*/
+@media only screen and (min-width: 0px) and (max-width: 576px){
+	/*Zorgt dat de tekst van de lijst in de footer van Sjoerd weer normaal naar links staat*/
+	#sjoerdList {
+		text-align: left !important;
+	}
+}
+
+/*Alles vanaf het punt dat de titel en burger icon onder elkaar komen te staan en kleiner*/
+@media only screen and (min-width: 0px) and (max-width: 262px){
+	/*Verbergt de tekst "Informatica Avans" in de navbar (onder de 262 pixels schermbreedte)*/
+	.brandToggler {
+		display: none;
+	}
+}
